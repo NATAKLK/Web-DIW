@@ -4,80 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Encuesta para conocer la opinión de los estudiantes sobre UniFix.">
+    <meta name="theme-color" content="#182b49">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="logo-unifix.svg">
     <title>UniFix | Encuesta</title>
 </head>
 <body>
-    <header>
-        <h1>Encuesta sobre UniFix</h1>
-        <p>Tu opinión ayuda a mejorar la propuesta</p>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header page-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="UniFix, página de inicio">
+                <img class="brand-logo" src="logo-unifix.svg" alt="">
+                <span class="brand-copy">
+                    <strong>UniFix</strong>
+                    <small>Organiza tu avance</small>
+                </span>
+            </a>
+            <div class="header-copy">
+                <h1>Encuesta sobre UniFix</h1>
+                <p>Tu opinión ayuda a mejorar la propuesta.</p>
+            </div>
+        </div>
     </header>
 
-    <nav aria-label="Navegación principal">
-        <a href="index.html">Inicio</a> |
-        <a href="problematica.html">Problemática</a> |
-        <a href="funciones.html">Funciones</a> |
-        <a href="encuesta.html">Encuesta</a>
+    <nav class="site-nav" aria-label="Navegación principal">
+        <div class="container nav-inner">
+            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="problematica.html">Problemática</a>
+            <a class="nav-link" href="funciones.html">Funciones</a>
+            <a class="nav-link" href="encuesta.html" aria-current="page">Encuesta</a>
+        </div>
     </nav>
 
-    <main>
-        <h2>Comparte tu opinión</h2>
-        <p>Esta encuesta busca conocer qué problemas de organización enfrentan los estudiantes y qué funciones serían más útiles en UniFix.</p>
+    <main id="contenido" class="container">
+        <section class="form-layout" aria-labelledby="opinion">
+            <form class="form-card" action="" method="post">
+                <div class="form-heading">
+                    <h2 id="opinion">Ayúdanos a diseñar una mejor experiencia</h2>
+                    <p>Queremos conocer qué problemas de organización enfrentas y qué funciones serían más útiles para ti.</p>
+                </div>
 
-        <form action="" method="post">
-            <fieldset>
-                <legend>Opinión del estudiante</legend>
+                <fieldset class="field-group">
+                    <legend>Opinión del estudiante</legend>
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                        </div>
 
-                <p>
-                    <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" required>
-                </p>
+                        <div class="field">
+                            <label for="semestre">Semestre actual</label>
+                            <select id="semestre" name="semestre">
+                                <option value="">Selecciona una opción</option>
+                                <option value="1-2">1.º - 2.º semestre</option>
+                                <option value="3-4">3.º - 4.º semestre</option>
+                                <option value="5-6">5.º - 6.º semestre</option>
+                            </select>
+                        </div>
 
-                <p>
-                    <label for="semestre">Semestre actual:</label><br>
-                    <select id="semestre" name="semestre">
-                        <option value="">Selecciona una opción</option>
-                        <option value="1-2">1.º - 2.º semestre</option>
-                        <option value="3-4">3.º - 4.º semestre</option>
-                        <option value="5-6">5.º - 6.º semestre</option>
-                    </select>
-                </p>
+                        <fieldset class="field field--wide field-group">
+                            <legend class="field-label">¿Usarías UniFix?</legend>
+                            <div class="radio-group">
+                                <label class="radio-option"><input type="radio" name="usar" value="si" required> Sí</label>
+                                <label class="radio-option"><input type="radio" name="usar" value="tal-vez"> Tal vez</label>
+                                <label class="radio-option"><input type="radio" name="usar" value="no"> Aún no</label>
+                            </div>
+                        </fieldset>
 
-                <p>
-                    <span>¿Usarías UniFix?</span><br>
-                    <label><input type="radio" name="usar" value="si" required> Sí</label>
-                    <label><input type="radio" name="usar" value="tal-vez"> Tal vez</label>
-                    <label><input type="radio" name="usar" value="no"> Aún no</label>
-                </p>
+                        <div class="field field--wide">
+                            <label for="funcion">Función más útil</label>
+                            <select id="funcion" name="funcion">
+                                <option value="">Selecciona una función</option>
+                                <option value="tareas">Gestión de tareas</option>
+                                <option value="plan">Plan diario</option>
+                                <option value="calendario">Calendario académico</option>
+                                <option value="notas">Notas rápidas</option>
+                                <option value="materias">Materias y calificaciones</option>
+                                <option value="recordatorios">Recordatorios</option>
+                                <option value="enfoque">Sesiones de enfoque</option>
+                            </select>
+                        </div>
 
-                <p>
-                    <label for="funcion">Función más útil:</label><br>
-                    <select id="funcion" name="funcion">
-                        <option value="">Selecciona una función</option>
-                        <option value="tareas">Gestión de tareas</option>
-                        <option value="plan">Plan diario</option>
-                        <option value="calendario">Calendario académico</option>
-                        <option value="notas">Notas rápidas</option>
-                        <option value="materias">Materias y calificaciones</option>
-                        <option value="recordatorios">Recordatorios</option>
-                        <option value="enfoque">Sesiones de enfoque</option>
-                    </select>
-                </p>
+                        <div class="field field--wide">
+                            <label for="comentarios">¿Qué te gustaría mejorar de tu organización?</label>
+                            <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
 
-                <p>
-                    <label for="comentarios">¿Qué te gustaría mejorar de tu organización?</label><br>
-                    <textarea id="comentarios" name="comentarios" rows="5" cols="40"></textarea>
-                </p>
+                <div class="actions">
+                    <button class="button button-primary" type="submit">Enviar opinión</button>
+                    <button class="button button-quiet" type="reset">Restablecer</button>
+                </div>
+            </form>
 
-                <button type="submit">Enviar</button>
-                <button type="reset">Restablecer</button>
-            </fieldset>
-        </form>
-
-        <p>La encuesta forma parte de un prototipo académico de UniFix.</p>
+            <aside class="survey-aside">
+                <h2>Tu experiencia orienta el diseño.</h2>
+                <p>La encuesta forma parte de un prototipo académico y nos ayuda a priorizar las necesidades reales de los estudiantes.</p>
+                <ul class="check-list">
+                    <li>Detectar los obstáculos más comunes.</li>
+                    <li>Priorizar funciones útiles.</li>
+                    <li>Mejorar la propuesta de UniFix.</li>
+                </ul>
+            </aside>
+        </section>
     </main>
 
     <footer>
-        <p>UniFix | Proyecto académico de organización universitaria</p>
+        <div class="container">
+            <p>UniFix | Proyecto académico de organización universitaria</p>
+        </div>
     </footer>
 </body>
 </html>

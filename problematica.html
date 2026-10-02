@@ -4,67 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Problemática de organización académica que busca atender UniFix.">
+    <meta name="theme-color" content="#182b49">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="logo-unifix.svg">
     <title>UniFix | Problemática</title>
 </head>
 <body>
-    <header>
-        <h1>Problemática académica</h1>
-        <p>Situaciones que dan origen a la propuesta de UniFix</p>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header page-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="UniFix, página de inicio">
+                <img class="brand-logo" src="logo-unifix.svg" alt="">
+                <span class="brand-copy">
+                    <strong>UniFix</strong>
+                    <small>Organiza tu avance</small>
+                </span>
+            </a>
+            <div class="header-copy">
+                <h1>Problemática académica</h1>
+                <p>Situaciones que dan origen a la propuesta de UniFix.</p>
+            </div>
+        </div>
     </header>
 
-    <nav aria-label="Navegación principal">
-        <a href="index.html">Inicio</a> |
-        <a href="problematica.html">Problemática</a> |
-        <a href="funciones.html">Funciones</a> |
-        <a href="encuesta.html">Encuesta</a>
+    <nav class="site-nav" aria-label="Navegación principal">
+        <div class="container nav-inner">
+            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link" href="problematica.html" aria-current="page">Problemática</a>
+            <a class="nav-link" href="funciones.html">Funciones</a>
+            <a class="nav-link" href="encuesta.html">Encuesta</a>
+        </div>
     </nav>
 
-    <main>
-        <h2>Problemas identificados</h2>
-        <ul>
-            <li><strong>Procrastinación académica:</strong> algunas tareas se posponen porque no existe un plan claro para comenzarlas.</li>
-            <li><strong>Información distribuida:</strong> las instrucciones, fechas y materiales pueden encontrarse en diferentes plataformas.</li>
-            <li><strong>Dificultad para organizar fechas:</strong> varias entregas y exámenes pueden coincidir en una misma semana.</li>
-            <li><strong>Distracciones al estudiar:</strong> cambiar entre aplicaciones y mensajes puede interrumpir la concentración.</li>
-        </ul>
+    <main id="contenido" class="container">
+        <section aria-labelledby="problemas">
+            <div class="section-heading">
+                <h2 id="problemas">Problemas identificados</h2>
+                <p class="lead">El diagnóstico muestra obstáculos cotidianos que dificultan planear, estudiar y dar seguimiento a las responsabilidades académicas.</p>
+            </div>
 
-        <h2>Resultados de la encuesta</h2>
-        <p>Los siguientes datos forman parte del diagnóstico inicial del proyecto UniFix:</p>
-        <table border="1">
-            <caption>Situaciones relacionadas con la organización académica</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Dato</th>
-                    <th scope="col">Porcentaje</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Procrastinan frecuentemente o siempre</td>
-                    <td>64.7%</td>
-                </tr>
-                <tr>
-                    <td>Pierden entre 5 y 15 minutos entre plataformas</td>
-                    <td>54.8%</td>
-                </tr>
-                <tr>
-                    <td>Usan herramientas especializadas de organización</td>
-                    <td>11.5%</td>
-                </tr>
-            </tbody>
-        </table>
+            <div class="problem-grid">
+                <article class="problem-card">
+                    <span class="problem-icon" aria-hidden="true">01</span>
+                    <h3>Procrastinación académica</h3>
+                    <p>Algunas tareas se posponen porque no existe un plan claro para comenzarlas.</p>
+                </article>
+                <article class="problem-card">
+                    <span class="problem-icon" aria-hidden="true">02</span>
+                    <h3>Información distribuida</h3>
+                    <p>Las instrucciones, fechas y materiales pueden encontrarse en diferentes plataformas.</p>
+                </article>
+                <article class="problem-card">
+                    <span class="problem-icon" aria-hidden="true">03</span>
+                    <h3>Fechas que coinciden</h3>
+                    <p>Varias entregas y exámenes pueden concentrarse en una misma semana.</p>
+                </article>
+                <article class="problem-card">
+                    <span class="problem-icon" aria-hidden="true">04</span>
+                    <h3>Distracciones al estudiar</h3>
+                    <p>Cambiar entre aplicaciones y mensajes puede interrumpir la concentración.</p>
+                </article>
+            </div>
+        </section>
 
-        <h2>¿Cómo responde UniFix?</h2>
-        <ul>
-            <li>Centraliza las tareas, notas y fechas importantes.</li>
-            <li>Permite consultar las actividades de cada materia.</li>
-            <li>Ayuda a transformar una lista de pendientes en un plan diario.</li>
-            <li>Incluye sesiones de enfoque para trabajar con una prioridad definida.</li>
-        </ul>
+        <section aria-labelledby="resultados">
+            <div class="section-heading">
+                <h2 id="resultados">Resultados de la encuesta</h2>
+                <p class="lead">Estos datos forman parte del diagnóstico inicial del proyecto UniFix.</p>
+            </div>
+
+            <div class="stat-grid" aria-label="Resumen de resultados">
+                <article class="stat-card">
+                    <strong>64.7%</strong>
+                    <span>procrastinan frecuentemente o siempre.</span>
+                </article>
+                <article class="stat-card">
+                    <strong>54.8%</strong>
+                    <span>pierden entre 5 y 15 minutos entre plataformas.</span>
+                </article>
+                <article class="stat-card">
+                    <strong>11.5%</strong>
+                    <span>usan herramientas especializadas de organización.</span>
+                </article>
+            </div>
+
+            <div class="table-wrap">
+                <table class="data-table">
+                    <caption>Situaciones relacionadas con la organización académica</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Dato</th>
+                            <th scope="col">Porcentaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Procrastinan frecuentemente o siempre</td>
+                            <td>64.7%</td>
+                        </tr>
+                        <tr>
+                            <td>Pierden entre 5 y 15 minutos entre plataformas</td>
+                            <td>54.8%</td>
+                        </tr>
+                        <tr>
+                            <td>Usan herramientas especializadas de organización</td>
+                            <td>11.5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="response-card" aria-labelledby="respuesta">
+            <h2 id="respuesta">¿Cómo responde UniFix?</h2>
+            <ul class="check-list">
+                <li>Centraliza tareas, notas y fechas importantes.</li>
+                <li>Permite consultar las actividades de cada materia.</li>
+                <li>Transforma pendientes en un plan diario.</li>
+                <li>Incluye sesiones de enfoque con una prioridad definida.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>UniFix | Proyecto académico de organización universitaria</p>
+        <div class="container">
+            <p>UniFix | Proyecto académico de organización universitaria</p>
+        </div>
     </footer>
 </body>
 </html>
