@@ -1,14 +1,13 @@
-<!--
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Encuesta para conocer la opinión de los estudiantes sobre UniFix.">
+    <meta name="description" content="Ayúdanos a hacer pública UniFix respondiendo una encuesta breve.">
     <meta name="theme-color" content="#182b49">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="logo-unifix.svg">
-    <title>UniFix | Encuesta</title>
+    <title>UniFix | Ayúdanos a hacer pública la app</title>
 </head>
 <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -23,8 +22,8 @@
                 </span>
             </a>
             <div class="header-copy">
-                <h1>Encuesta sobre UniFix</h1>
-                <p>Tu opinión ayuda a mejorar la propuesta.</p>
+                <h1>Ayúdanos a hacer pública la app</h1>
+                <p>Cuéntanos qué te gustaría encontrar en UniFix. Solo te tomará un minuto.</p>
             </div>
         </div>
     </header>
@@ -34,79 +33,74 @@
             <a class="nav-link" href="index.html">Inicio</a>
             <a class="nav-link" href="problematica.html">Problemática</a>
             <a class="nav-link" href="funciones.html">Funciones</a>
-            <a class="nav-link" href="encuesta.html" aria-current="page">Encuesta</a>
+            <a class="nav-link" href="encuesta.html" aria-current="page">Ayúdanos</a>
         </div>
     </nav>
 
     <main id="contenido" class="container">
         <section class="form-layout" aria-labelledby="opinion">
-            <form class="form-card" action="" method="post">
+            <form class="form-card" id="encuesta-form">
                 <div class="form-heading">
-                    <h2 id="opinion">Ayúdanos a diseñar una mejor experiencia</h2>
-                    <p>Queremos conocer qué problemas de organización enfrentas y qué funciones serían más útiles para ti.</p>
+                    <h2 id="opinion">Una encuesta breve</h2>
+                    <p>Tu opinión nos ayudará a decidir qué mejorar antes de publicar UniFix.</p>
                 </div>
 
-                <fieldset class="field-group">
-                    <legend>Opinión del estudiante</legend>
-                    <div class="form-grid">
-                        <div class="field">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
-                        </div>
-
-                        <div class="field">
-                            <label for="semestre">Semestre actual</label>
-                            <select id="semestre" name="semestre">
-                                <option value="">Selecciona una opción</option>
-                                <option value="1-2">1.º - 2.º semestre</option>
-                                <option value="3-4">3.º - 4.º semestre</option>
-                                <option value="5-6">5.º - 6.º semestre</option>
-                            </select>
-                        </div>
-
-                        <fieldset class="field field--wide field-group">
-                            <legend class="field-label">¿Usarías UniFix?</legend>
-                            <div class="radio-group">
-                                <label class="radio-option"><input type="radio" name="usar" value="si" required> Sí</label>
-                                <label class="radio-option"><input type="radio" name="usar" value="tal-vez"> Tal vez</label>
-                                <label class="radio-option"><input type="radio" name="usar" value="no"> Aún no</label>
-                            </div>
-                        </fieldset>
-
-                        <div class="field field--wide">
-                            <label for="funcion">Función más útil</label>
-                            <select id="funcion" name="funcion">
-                                <option value="">Selecciona una función</option>
-                                <option value="tareas">Gestión de tareas</option>
-                                <option value="plan">Plan diario</option>
-                                <option value="calendario">Calendario académico</option>
-                                <option value="notas">Notas rápidas</option>
-                                <option value="materias">Materias y calificaciones</option>
-                                <option value="recordatorios">Recordatorios</option>
-                                <option value="enfoque">Sesiones de enfoque</option>
-                            </select>
-                        </div>
-
-                        <div class="field field--wide">
-                            <label for="comentarios">¿Qué te gustaría mejorar de tu organización?</label>
-                            <textarea id="comentarios" name="comentarios" rows="5"></textarea>
-                        </div>
+                <div class="form-grid">
+                    <div class="field field--wide">
+                        <label for="motivo">¿Por qué descargarías UniFix?</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Selecciona una opción</option>
+                            <option>Organizar tareas y entregas</option>
+                            <option>Consultar mi horario y calendario</option>
+                            <option>Dar seguimiento a materias y calificaciones</option>
+                            <option>Usar recordatorios y sesiones de enfoque</option>
+                            <option>Explorar todas sus funciones</option>
+                            <option>Otro motivo</option>
+                        </select>
                     </div>
-                </fieldset>
+
+                    <div class="field field--wide">
+                        <label for="funcion">¿Qué función te gustaría utilizar más?</label>
+                        <select id="funcion" name="funcion" required>
+                            <option value="">Selecciona una función</option>
+                            <option>Gestión de tareas</option>
+                            <option>Horario y calendario académico</option>
+                            <option>Materias y calificaciones</option>
+                            <option>Notas y recordatorios</option>
+                            <option>Sesiones de enfoque</option>
+                            <option>Otra</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="field field--wide field-group">
+                        <legend class="field-label">Si UniFix estuviera disponible, ¿la instalarías?</legend>
+                        <div class="radio-group">
+                            <label class="radio-option"><input type="radio" name="instalarias" value="Sí" required> Sí</label>
+                            <label class="radio-option"><input type="radio" name="instalarias" value="Tal vez"> Tal vez</label>
+                            <label class="radio-option"><input type="radio" name="instalarias" value="Necesito saber más"> Necesito saber más</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="field field--wide">
+                        <label for="sugerencia">¿Qué te gustaría que mejoráramos antes de publicarla? <span>(opcional)</span></label>
+                        <textarea id="sugerencia" name="sugerencia" rows="4" maxlength="500" placeholder="Escribe una sugerencia breve"></textarea>
+                    </div>
+                </div>
 
                 <div class="actions">
-                    <button class="button button-primary" type="submit">Enviar opinión</button>
-                    <button class="button button-quiet" type="reset">Restablecer</button>
+                    <button class="button button-primary" type="submit">Enviar respuestas</button>
+                    <button class="button button-quiet" type="reset">Borrar respuestas</button>
                 </div>
+                <p id="encuesta-status" role="status" aria-live="polite"></p>
             </form>
 
             <aside class="survey-aside">
-                <h2>Tu experiencia orienta el diseño.</h2>
-                <p>La encuesta forma parte de un prototipo académico y nos ayuda a priorizar las necesidades reales de los estudiantes.</p>
+                <h2>Tu opinión puede acercar UniFix a más estudiantes.</h2>
+                <p>Las respuestas se preparan en un correo para que las revises y confirmes el envío. Esta página no almacena tus respuestas.</p>
                 <ul class="check-list">
-                    <li>Detectar los obstáculos más comunes.</li>
-                    <li>Priorizar funciones útiles.</li>
-                    <li>Mejorar la propuesta de UniFix.</li>
+                    <li>No pedimos tu nombre ni datos escolares.</li>
+                    <li>Revisa el correo antes de enviarlo.</li>
+                    <li>También puedes escribirnos a <a href="mailto:unifixmx.support@gmail.com">unifixmx.support@gmail.com</a>.</li>
                 </ul>
             </aside>
         </section>
@@ -116,8 +110,7 @@
         <div class="container">
             <p>UniFix | Proyecto académico de organización universitaria</p>
         </div>
--->
-
     </footer>
+    <script src="js/encuesta.js" defer></script>
 </body>
 </html>
