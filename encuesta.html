@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-grid">
-                    <div class="field field--wide">
+                    <div class="field field--wide" data-question="motivo">
                         <label for="motivo">¿Por qué descargarías UniFix?</label>
                         <select id="motivo" name="motivo" required>
                             <option value="">Selecciona una opción</option>
@@ -59,7 +59,7 @@
                         </select>
                     </div>
 
-                    <div class="field field--wide">
+                    <div class="field field--wide" data-question="funcion">
                         <label for="funcion">¿Qué función te gustaría utilizar más?</label>
                         <select id="funcion" name="funcion" required>
                             <option value="">Selecciona una función</option>
@@ -72,7 +72,7 @@
                         </select>
                     </div>
 
-                    <fieldset class="field field--wide field-group">
+                    <fieldset class="field field--wide field-group" data-question="instalarias">
                         <legend class="field-label">Si UniFix estuviera disponible, ¿la instalarías?</legend>
                         <div class="radio-group">
                             <label class="radio-option"><input type="radio" name="instalarias" value="Sí" required> Sí</label>
@@ -84,6 +84,7 @@
                     <div class="field field--wide">
                         <label for="sugerencia">¿Qué te gustaría que mejoráramos antes de publicarla? <span>(opcional)</span></label>
                         <textarea id="sugerencia" name="sugerencia" rows="4" maxlength="500" placeholder="Escribe una sugerencia breve"></textarea>
+                        <p class="character-count" id="character-count">0 / 500 caracteres</p>
                     </div>
                 </div>
 
@@ -96,6 +97,21 @@
 
             <aside class="survey-aside">
                 <h2>Tu opinión puede acercar UniFix a más estudiantes.</h2>
+                <div class="survey-progress">
+                    <div class="survey-progress__heading">
+                        <h3 id="progress-heading">Tu avance</h3>
+                        <strong id="progress-count">0 de 3</strong>
+                    </div>
+                    <div class="survey-progress__track" id="survey-progress" role="progressbar" aria-labelledby="progress-heading" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0">
+                        <span class="survey-progress__fill" id="survey-progress-fill"></span>
+                    </div>
+                    <p class="survey-progress__message" id="progress-message">Responde las tres preguntas obligatorias para completar la encuesta.</p>
+                    <ul class="survey-progress__steps" aria-label="Preguntas obligatorias">
+                        <li data-step="motivo">Motivo para descargar UniFix</li>
+                        <li data-step="funcion">Función que más te interesa</li>
+                        <li data-step="instalarias">Interés en instalarla</li>
+                    </ul>
+                </div>
                 <p>Las respuestas se preparan en un correo para que las revises y confirmes el envío. Esta página no almacena tus respuestas.</p>
                 <ul class="check-list">
                     <li>No pedimos tu nombre ni datos escolares.</li>

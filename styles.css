@@ -902,6 +902,117 @@ main > section + section {
     margin-top: 1.5rem;
 }
 
+.survey-progress {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.85rem;
+}
+
+.survey-progress__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.survey-progress__heading h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.05rem;
+}
+
+.survey-progress__heading strong {
+    color: var(--blue);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.survey-progress__track {
+    height: 0.65rem;
+    margin-top: 0.85rem;
+    overflow: hidden;
+    background: #e8edf5;
+    border-radius: 999px;
+}
+
+.survey-progress__fill {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--blue);
+    border-radius: inherit;
+    transition: width 220ms ease;
+}
+
+.survey-progress__message {
+    margin: 0.7rem 0 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+}
+
+.survey-progress__steps {
+    display: grid;
+    gap: 0.5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.survey-progress__steps li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.5rem 0.6rem;
+    color: var(--muted);
+    background: #f4f6fa;
+    border-radius: 0.5rem;
+    font-size: 0.88rem;
+    transition: color 180ms ease, background-color 180ms ease;
+}
+
+.survey-progress__steps li::before {
+    content: "○";
+    color: #8390a3;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.survey-progress__steps li.is-complete {
+    color: #185c42;
+    background: #e8f5ee;
+}
+
+.survey-progress__steps li.is-complete::before {
+    content: "✓";
+    color: #21815b;
+}
+
+.field.is-complete select {
+    border-color: var(--teal);
+    background-color: #f3fbf7;
+}
+
+.character-count {
+    justify-self: end;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+#encuesta-status:empty {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .survey-progress__fill,
+    .survey-progress__steps li {
+        transition: none;
+    }
+}
+
 footer {
     padding-block: 1.5rem;
     color: var(--muted);
